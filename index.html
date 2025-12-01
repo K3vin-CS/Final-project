@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Booking Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card book-trip">
+      <h3>Book Trip</h3>
+      <label>Destination</label>
+      <select id="destination">
+        <option>Select destination</option>
+        <option>Barcelona Getaway</option>
+        <option>Spain Highlights</option>
+        <option>Spanish Countryside</option>
+      </select>
+
+      <label>Dates</label>
+      <input type="text" placeholder="30 May – 5 Jun" />
+
+      <button class="btn">Search</button>
+    </div>
+
+    <div class="card booking-management">
+      <h3>Booking Management</h3>
+      <table>
+        <tr><th>Booking ID</th><th>Traveler</th><th>Destination</th></tr>
+        <tr><td>BK-001</td><td>Jane Doe</td><td>Barcelona</td></tr>
+      </table>
+    </div>
+
+    <div class="card cancellation">
+      <h3>Cancelation Requests</h3>
+      <table>
+        <tr><th>Request ID</th><th>User name</th><th>Reason</th></tr>
+        <tr><td>CR-001</td><td>John Doe</td><td>Changed plans</td></tr>
+      </table>
+    </div>
+
+    <div class="card package">
+      <h3>Choose Package</h3>
+      <div class="packages">
+        <div class="pkg-item">
+          <img src="https://thumbs.dreamstime.com/b/arc-de-triomf-memorial-arch-barcelona-was-built-as-gateway-to-fair-which-held-parc-la-ciutadella-monument-classical-305566427.jpg?w=576" />
+          <p><strong>Barcelona Getaway</strong><br>5 days<br>$1,200</p>
+        </div>
+        <div class="pkg-item">
+          <img src="https://tse3.mm.bing.net/th/id/OIP.4q1Ye3mkQv644GdE1magcQHaE8?pid=Api&P=0&h=220" />
+          <p><strong>Spain Highlights</strong><br>7 days<br>$1,800</p>
+        </div>
+        <div class="pkg-item">
+          <img src="https://tse3.mm.bing.net/th/id/OIP.qlXV1XNZ3N3oeLZK3WkaAAHaE-?pid=Api&P=0&h=220" />
+          <p><strong>Spanish Countryside</strong><br>4 days<br>$900</p>
+        </div>
+      </div>
+
+      <button class="btn">Pay</button>
+    </div>
+
+    <div class="card payment">
+      <h3>Payment Method</h3>
+      <label><input type="radio" name="payment" checked> Credit card</label>
+      <label><input type="radio" name="payment"> PayPal</label>
+      <label><input type="radio" name="payment"> Bank transfer</label>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

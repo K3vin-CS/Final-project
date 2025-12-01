@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Itinerary UI</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+  <div class="phone">
+    <div class="topbar">⬅ Itinerary</div>
+
+    <div class="search-box">
+      <input type="text" placeholder="Search Itineraries" />
+    </div>
+
+    <div class="card">📍 Paris<br><small>July 15–20</small></div>
+    <div class="card">🧳 New York<br><small>Aug 5–10</small></div>
+    <div class="card">🧳 Bali<br><small>Sep 10–18</small></div>
+
+    <button class="create-btn">＋ Create Itinerary</button>
+  </div>
+
+  <div class="phone">
+    <div class="topbar">
+      <span class="Left arrow">⬅</span>
+      <span>Create Itinerary</span>
+      <span class="checkmark">✔</span>
+    </div>
+
+    <div class="form">
+      <label>Itinerary Name</label>
+      <input type="text" />
+
+      <label>Destination</label>
+      <select>
+        <option>Select destination</option>
+        <option>Paris</option>
+        <option>New York</option>
+        <option>Bali</option>
+      </select>
+
+      <label>Start Date</label>
+      <input type="date" />
+
+      <label>End Date</label>
+      <input type="date" />
+
+      <label>Travel Notes</label>
+      <input type="text" placeholder="+ Add Activity" />
+
+      <button class="save-btn">Save Itinerary</button>
+    </div>
+  </div>
+
+  <script src="script2.js"></script>
+</body>
+</html>
