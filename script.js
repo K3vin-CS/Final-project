@@ -23,28 +23,12 @@ function addBooking(id, traveler, destination) {
   table.appendChild(row);
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-  setTimeout(() => {
-    addBooking('BK-002', 'Emily Carter', 'Spain');
-  }, 2000);
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-  setTimeout(() => {
-    addBooking('BK-003', 'Michael Lee', 'Spain');
-  }, 2000);
-});
-
 function addCancellation(id, user, reason) {
   const table = document.querySelector('.cancellation table');
   const row = document.createElement('tr');
   row.innerHTML = `<td>${id}</td><td>${user}</td><td>${reason}</td>`;
   table.appendChild(row);
 }
-
-setTimeout(() => {
-  addCancellation('CR-002', 'Michael Lee', 'Heatstroke');
-}, 3000);
 
 function logPayment(user, method) {
   console.log(`Payment by ${user} using ${method}`);
