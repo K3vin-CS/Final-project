@@ -31,16 +31,30 @@ h3 {
 label {
   font-size: 14px;
   margin-top: 10px;
+  align-items: center;
   display: block;
   margin-bottom: 4px;
 }
 
-input, select {
+select {
   width: 100%;
   padding: 10px;
   margin-bottom: 12px;
   border-radius: 6px;
   border: 1px solid #ccc;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.input-payment {
+  margin: 0px;
+  padding: 0px;
 }
 
 .btn {
