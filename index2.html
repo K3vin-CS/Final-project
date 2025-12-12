@@ -10,13 +10,14 @@
   <div class="phone">
     <div class="topbar">⬅ Itinerary</div>
 
-    <div class="search-box">
+    <div class="search">
       <input type="text" placeholder="Search Itineraries" />
     </div>
-
+    <div class="itinerary-list">
     <div class="card">📍 Paris<br><small>July 15–20</small></div>
     <div class="card">🧳 New York<br><small>Aug 5–10</small></div>
     <div class="card">🧳 Bali<br><small>Sep 10–18</small></div>
+    </div>
 
     <button class="create-btn">＋ Create Itinerary</button>
   </div>
@@ -30,24 +31,24 @@
 
     <div class="form">
       <label>Itinerary Name</label>
-      <input type="text" />
+      <input class="itinerary-name" type="text" />
 
-      <label>Destination</label>
-      <select>
-        <option>Select destination</option>
-        <option>Paris</option>
-        <option>New York</option>
-        <option>Bali</option>
-      </select>
+   <label>Destination</label>
+     <select class="destination">
+       <option>Select destination</option>
+       <option>Paris</option>
+       <option>New York</option>
+       <option>Bali</option>
+     </select>
 
       <label>Start Date</label>
-      <input type="date" />
+      <input class="start-date" type="date" />
 
       <label>End Date</label>
-      <input type="date" />
+      <input class="end-date" type="date" />
 
       <label>Travel Notes</label>
-      <input type="text" placeholder="+ Add Activity" />
+      <input class="activity" type="activity" placeholder="+ Add Activity" />
 
       <button class="save-btn">Save Itinerary</button>
     </div>
