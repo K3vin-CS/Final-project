@@ -31,16 +31,20 @@ h3 {
 label {
   font-size: 14px;
   margin-top: 10px;
-  display: block;
+  display: flex;
+  gap: 10px;
   margin-bottom: 4px;
 }
 
 input, select {
-  width: 100%;
   padding: 10px;
   margin-bottom: 12px;
   border-radius: 6px;
   border: 1px solid #ccc;
+}
+
+.book-trip input,select {
+  width: 100%;
 }
 
 .btn {
