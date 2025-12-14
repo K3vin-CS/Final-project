@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <a href="./index2.html">
+  <a href="./itinerary.html">
     <label>This will take you to the intinerary</label>
   </a>
   <div class="container">
@@ -21,8 +21,8 @@
         <option>Spanish Countryside</option>
       </select>
 
-      <label>Dates</label>
-      <input type="text" placeholder="30 May – 5 Jun" />
+      <label>Date</label>
+      <input type="text" placeholder="Enter Date" />
 
       <button class="btn">Search</button>
     </div>
@@ -36,11 +36,11 @@
         </div>
         <div class="pkg-item">
           <img src="https://tse3.mm.bing.net/th/id/OIP.4q1Ye3mkQv644GdE1magcQHaE8?pid=Api&P=0&h=220" />
-          <p><strong>Spain Highlights</strong><br>7 days<br>$1,800</p>
+          <p><strong>Spain Highlights</strong><br>7 days<br>$1,200</p>
         </div>
         <div class="pkg-item">
           <img src="https://tse3.mm.bing.net/th/id/OIP.qlXV1XNZ3N3oeLZK3WkaAAHaE-?pid=Api&P=0&h=220" />
-          <p><strong>Spanish Countryside</strong><br>4 days<br>$900</p>
+          <p><strong>Spanish Countryside</strong><br>4 days<br>$1,200</p>
         </div>
       </div>
 
@@ -49,11 +49,40 @@
 
     <div class="card payment">
       <h3>Payment Method</h3>
-      <label><input class="input-payment" type="radio" name="payment"> Credit card</label>
-      <label><input class="input-payment" type="radio" name="payment"> PayPal</label>
-      <label><input class="input-payment" type="radio" name="payment"> Bank transfer</label>
-      <label>Total Payment</label>
-      <Label>Total Number</Label>
+      <label><input class="input-payment" type="radio" name="payment" value="Credit card"> Credit card</label>
+      <label><input class="input-payment" type="radio" name="payment" value="Paypal"> PayPal</label>
+      <label><input class="input-payment" type="radio" name="payment" value="Bank transfer"> Bank transfer</label>
+      <div class="payment-management">
+      
+<h3 for="customerName">Customer Name</h3>
+<input 
+  type="text" 
+  id="customerName" 
+  placeholder="Enter customer name"
+  class="input-field"
+>
+
+<button id="confirmPaymentBtn" class="btn">Confirm Payement</button>
+  
+  <h3>Payment Management</h3>
+  <table class="payment-table">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Method</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody id="paymentList">
+    </tbody>
+  </table>
+
+  <div class="total-payment">
+    <span>Total Payment</span>
+    <strong id="totalPayment">$0</strong>
+  </div>
+</div>
+
     </div>
   </div>
 

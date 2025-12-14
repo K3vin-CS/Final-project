@@ -1,7 +1,3 @@
-document.getElementById("destination").addEventListener("change", function () {
-  console.log("Selected destination:", this.value);
-});
-
 document.querySelector(".book-trip .btn").addEventListener("click", function () {
   alert("Searching trips...");
 });
@@ -16,24 +12,59 @@ document.querySelectorAll('input[name="pay"]').forEach((radio) => {
   });
 });
 
-function addBooking(id, traveler, destination) {
-  const table = document.querySelector('.booking-management table');
-  const row = document.createElement('tr');
-  row.innerHTML = `<td>${id}</td><td>${traveler}</td><td>${destination}</td>`;
+document.getElementById("confirmPaymentBtn").addEventListener("click", function () {
+  const name = document.getElementById("customerName").value.trim();
+  const method = document.querySelector('input[name="payment"]:checked');
+
+  if (!name) {
+    alert("Please enter customer name");
+    return;
+  }
+
+  if (!method) {
+    alert("Please select payment method");
+    return;
+  }
+
+  const amount = 1200;
+
+  const table = document.getElementById("paymentList");
+  const row = document.createElement("tr");
+
+  row.innerHTML = `
+    <td>${name}</td>
+    <td>${method.value}</td>
+    <td>$${amount}</td>
+  `;
+
   table.appendChild(row);
+
+  calculateTotalPayment();
+  
+function calculateTotalPayment() {
+  let total = 0;
+
+  const rows = document.querySelectorAll("#paymentList tr");
+
+  rows.forEach(row => {
+    const amountCell = row.children[2];
+    if (!amountCell) return;
+
+    const amount = parseFloat(
+      amountCell.textContent.replace(/[^0-9.]/g, "")
+    );
+
+    if (!isNaN(amount)) {
+      total += amount;
+    }
+  });
+
+  document.getElementById("totalPayment").textContent =
+    "$" + total.toFixed(0);
 }
 
-function addCancellation(id, user, reason) {
-  const table = document.querySelector('.cancellation table');
-  const row = document.createElement('tr');
-  row.innerHTML = `<td>${id}</td><td>${user}</td><td>${reason}</td>`;
-  table.appendChild(row);
-}
+document.addEventListener("DOMContentLoaded", calculateTotalPayment);
 
-function logPayment(user, method) {
-  console.log(`Payment by ${user} using ${method}`);
-}
+  alert("Payment confirmed successfully!");
+});
 
-setTimeout(() => {
-  logPayment('Sarah Wong', 'Credit Card');
-}, 4000);

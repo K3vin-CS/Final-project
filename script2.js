@@ -70,7 +70,7 @@ function renderList() {
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
-      🧳 ${item.name} ${item.destination}<br>
+      🧳 ${item.name} - ${item.destination}<br>
       <small>${item.start} – ${item.end}</small><br>
       ${item.notes}
     `;
