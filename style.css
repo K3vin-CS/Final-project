@@ -10,17 +10,22 @@ body {
   padding: 20px;
 }
 
-.container {
+.main-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  align-items: stretch
 }
 
 .card {
+  width: 80%;
   background: #fff;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 h3 {
@@ -44,11 +49,11 @@ input, select {
 }
 
 .book-trip input,select {
-  width: 100%;
+  width: 60%;
 }
 
 .btn {
-  width: 100%;
+  width: 60%;
   background: #3ba55d;
   color: #fff;
   padding: 10px;
@@ -59,7 +64,7 @@ input, select {
 }
 
 .select-btn {
-  width: 100%;
+  width: 30%;
   background: #3ba55d;
   color: #fff;
   padding: 10px;
@@ -107,7 +112,7 @@ table th, table td {
 }
 
 .input-field {
-  width: 100%;
+  width: 60%;
   padding: 10px;
   justify-content: left;
   margin-top: 4px;
@@ -153,4 +158,72 @@ table th, table td {
   border-top: 2px solid #eee;
   font-size: 16px;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .card,
+  .book-trip,
+  .choose-package,
+  .payment-method {
+    width: 100%;
+    margin: 0;
+  }
+
+  .package-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .package-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .package-info {
+    padding: 10px 0;
+  }
+
+  .select-btn {
+    width: 100%;
+    margin-top: 10px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  input,
+  select,
+  button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .payment-table {
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 8px;
+    white-space: nowrap;
+  }
+
+  .total-payment {
+    font-size: 18px;
+    text-align: right;
+  }
 }

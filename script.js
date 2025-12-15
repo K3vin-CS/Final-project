@@ -1,5 +1,5 @@
 document.querySelector(".book-trip .btn").addEventListener("click", function () {
-  alert("Searching trips...");
+  alert("Please select the package you want");
 });
 
   let selectedPackage = "";
@@ -10,7 +10,7 @@ document.querySelectorAll(".select-btn").forEach(button => {
     selectedPackage = this.dataset.name;
     selectedPrice = parseFloat(this.dataset.price);
 
-    alert("Selected package: ${selectedPackage} ($${selectedprice})");
+    alert("Thank you for selecting this package");
   });
 });
 

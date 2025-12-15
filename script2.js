@@ -1,22 +1,22 @@
 let itineraries = [{
   name: "Juan",
   destination: "Paris",
-  start: "15-07-2025",
-  end: "20-07-2025",
+  start: "2025-07-15",
+  end: "2025-07-20",
   notes: "Laptop"
 },
 {
   name: "Renjiro",
   destination: "New york",
-  start: "05-09-2025",
-  end: "10-08-2025",
+  start: "2025-09-05",
+  end: "2025-09-10",
   notes: "Manga"
 },
 {
   name: "Kevin",
   destination: "Bali",
-  start: "10-09-2025",
-  end: "18-09-2025",
+  start: "2025-09-10",
+  end: "2025-09-18",
   notes: "Fan"
 }];
 
