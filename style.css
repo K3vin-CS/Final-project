@@ -58,6 +58,17 @@ input, select {
   cursor: pointer;
 }
 
+.select-btn {
+  width: 100%;
+  background: #3ba55d;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 .btn:hover {
   background: #3ba55d;
 }

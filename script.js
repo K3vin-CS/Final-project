@@ -2,8 +2,16 @@ document.querySelector(".book-trip .btn").addEventListener("click", function () 
   alert("Searching trips...");
 });
 
-document.querySelector(".package .btn").addEventListener("click", function () {
-  alert("Processing payment...");
+  let selectedPackage = "";
+  let selectedPrice = 0;
+
+document.querySelectorAll(".select-btn").forEach(button => {
+  button.addEventListener("click", function () {
+    selectedPackage = this.dataset.name;
+    selectedPrice = parseFloat(this.dataset.price);
+
+    alert("Selected package: ${selectedPackage} ($${selectedprice})");
+  });
 });
 
 document.querySelectorAll('input[name="pay"]').forEach((radio) => {
@@ -26,6 +34,11 @@ document.getElementById("confirmPaymentBtn").addEventListener("click", function 
     return;
   }
 
+  if (!selectedPackage) {
+    alert("Please select a package first");
+    return;
+  }
+
   const amount = 1200;
 
   const table = document.getElementById("paymentList");
@@ -33,7 +46,7 @@ document.getElementById("confirmPaymentBtn").addEventListener("click", function 
 
   row.innerHTML = `
     <td>${name}</td>
-    <td>${method.value}</td>
+    <td>${selectedPackage} (${method.value})</td>
     <td>$${amount}</td>
   `;
 
